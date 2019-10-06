@@ -5,3 +5,9 @@ This will bring you here
 
 `creator:
 This will inform you of who made this bot.
+
+`clear:
+Clears the channel
+
+`report <bug>:
+Reports a bug to the buggy man.
