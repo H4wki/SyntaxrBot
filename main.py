@@ -43,12 +43,10 @@ async def on_message(message):
 
     if message.content.startswith('`report'):
         if message.channel.name != "bug-report":
-            if message.id not in sentreports:
-                for i in client.get_all_channels():
-                    if i.name == "bug-report":
-                        sentreports.append(message.id)
-                        problem = re.split(r'\w\s', message.content, 1)
-                        await i.send('Reportee: {0}\nTime sent: {1} \nDescription: {2}'.format(message.author, message.created_at, problem[1]))
+            for i in client.get_all_channels():
+                if i.name == "bug-report":
+                    problem = re.split(r'\w\s', message.content, 1)
+                    await i.send('Reportee: {0}\nTime sent: {1} \nDescription: {2}'.format(message.author, message.created_at, problem[1]))
     
 
 getToken = open("token.token", "r")
