@@ -8,15 +8,15 @@ import discord,os,re
 
 client = discord.Client()
 
-sentreports=[]
+sentreports = []
 
 @client.event
 async def on_ready():
     print('We have logged in as {0.user}'.format(client))
 
 @client.event
-async def on_message(message):
-    if isinstance(message.channel,discord.TextChannel):
+async def on_message(message):    
+    if isinstance(message.channel, discord.TextChannel):
         if message.channel.name == "bot-commands":
             if message.content.startswith('`lulw'):
                 channel = message.channel
