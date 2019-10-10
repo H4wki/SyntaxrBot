@@ -28,7 +28,7 @@ async def on_message(message):
 
             if message.content.startswith('`clear'):
                 channel = message.channel
-                await channel.purge()
+                await channel.purge()#change this to not be 
 
             if message.content.startswith('`help'):
                 target = message.author
